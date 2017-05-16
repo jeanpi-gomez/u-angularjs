@@ -35,5 +35,5 @@ If you want to see my solution, click [here][3].
 
  [1]: http://bguiz.github.io/js-standards/angularjs/application-structure-lift-principle/
  [2]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#style-y150
- [3]: https://github.com/jeanpi-gomez/u-angularjs/tree/solved/001-file-structure
+ [3]: https://github.com/jeanpi-gomez/u-angularjs/tree/solved/001-file-structure/001-project-file-structure
  [4]: https://github.com/talosdigital/u-angularjs/tree/master/002-routing-params-views
