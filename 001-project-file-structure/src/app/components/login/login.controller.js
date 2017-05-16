@@ -10,13 +10,15 @@
     var vm = this;
     vm.form = {};
 
-    vm.login = function (credentials) {
+    vm.login = login;
+
+    function login (credentials) {
       LoginService.login(credentials).then(function (response) {
         $log.info(response);
         $state.go('app.dashboard');
       }, function (error) {
         $log.error(error);
       });
-    };
+    }
   }
 })();

@@ -15,13 +15,25 @@ Perform the following in the current example:
 * Create a Dashboard page after sign in up.
 
 ### Solution
+Just to start working on this exercise I've updated the ui-router to 1.0.0-beta.3 because that version already supports components in routers,
+this a good practise if you want to modularise your project, also allows you to have a component's pool to get any previous
+component that you had made and it can be reused in another project just as it is or adding some modifications.
+Basically we have 3 major components, Login / Dashboard / App.
+Also we have separately components for the layout of the application, one component for header and another for footer.
 
-If you want to see the solution, click [here][3].
+In commons folder is the place for those thing we are going to use no matter the component or view. e.g. Services, Filters, Directives, Factories, Utils, etc.
+Also we have a basic service for login, in this one you can access to login and logout functions to manage your session.
+I used $localStorage to make persistent the login data across the browser session.
+
+I decided to go with independently routes for each component, in this way it's more flexible and reusable.
+In dashboard and login routes I used the resolves to check if the user is already login or if he doesn't to allow the transition.
+
+If you want to see my solution, click [here][3].
 
 ### Next
 * [002 - States, views and params][4]
 
  [1]: http://bguiz.github.io/js-standards/angularjs/application-structure-lift-principle/
  [2]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#style-y150
- [3]: https://github.com/talosdigital/u-angularjs/tree/solved/001-projec-file-structure/001-project-file-structure#solution
+ [3]: https://github.com/jeanpi-gomez/u-angularjs/tree/solved/001-file-structure
  [4]: https://github.com/talosdigital/u-angularjs/tree/master/002-routing-params-views
