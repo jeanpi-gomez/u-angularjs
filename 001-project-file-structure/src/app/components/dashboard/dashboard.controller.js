@@ -3,10 +3,10 @@
 
   angular
     .module('angularEx1')
-    .controller('HomeController', HomeController);
+    .controller('DashboardController', DashboardController);
 
   /** @ngInject */
-  function HomeController($log, SITE_NAME) {
+  function DashboardController($log, SITE_NAME) {
     var vm = this;
     vm.mainTitle = SITE_NAME;
     vm.signUpToday = signUpToday;

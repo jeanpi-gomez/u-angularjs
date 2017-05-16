@@ -6,9 +6,10 @@
     .config(config);
 
   /** @ngInject */
-  function config($logProvider) {
+  function config($logProvider, $localStorageProvider) {
     // Enable log
     $logProvider.debugEnabled(true);
+    $localStorageProvider.setKeyPrefix('talosUniversity');
   }	
 
 })();
