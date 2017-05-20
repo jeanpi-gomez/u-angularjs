@@ -11,7 +11,7 @@
       .state('auth', {
         abstract: true,
         template: '<section class="general-section" ui-view></section>',
-        url: '/auth',
+        url: '/auth'
       })
       .state('login', {
       	parent: 'auth',

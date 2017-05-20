@@ -1,0 +1,11 @@
+<div class="main-container">
+  <div class="page-wrap">
+    <app-header></app-header>
+    <section class="site container d-flex flex-column">
+      <main class="site-content d-flex">
+        <ui-view ng-class="appCtrl.$state.current.data.viewClass"></ui-view>
+      </main>
+    </section>
+  </div>
+  <app-footer></app-footer>
+</div>

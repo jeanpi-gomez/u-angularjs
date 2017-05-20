@@ -3,10 +3,10 @@
 
   angular
     .module('angularApp')
-    .controller('HomeController', HomeController);
+    .controller('DashboardController', DashboardController);
 
   /** @ngInject */
-  function HomeController($log, SITE_NAME, $state) {
+  function DashboardController(SITE_NAME) {
     var vm = this;
     vm.mainTitle = SITE_NAME;
     vm.signUpToday = signUpToday;
