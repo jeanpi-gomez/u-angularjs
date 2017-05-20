@@ -6,15 +6,15 @@
     .config(routerConfig);
 
   /** @ngInject */
-  function routerConfig($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('home', {
-        url: '/',
-        templateUrl: 'app/states/home/home.html',
-        controller: 'HomeController',
-        controllerAs: 'homeCtrl'
-      });
+  function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
+    $locationProvider.html5Mode(true).hashPrefix('!');
 
+    $stateProvider
+      .state('app', {
+        url: '/',
+        abstract: true,
+        component: 'app'
+      });
     $urlRouterProvider.otherwise('/');
   }
 
