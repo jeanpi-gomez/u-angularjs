@@ -43,4 +43,4 @@ If you want to see my solution, click [here][3].
 
 [1]:https://github.com/angular-ui/ui-router/wiki/Multiple-Named-Views
 [2]:https://github.com/angular-ui/ui-router/wiki/Nested-States-and-Nested-Views
-[3]:https://github.com/jeanpi-gomez/u-angularjs/tree/solved/002-routing-params-views/002-routing-params-views
+[3]:https://github.com/jeanpi-gomez/u-angularjs/tree/solved/002-routes-params-views/002-routing-params-views
