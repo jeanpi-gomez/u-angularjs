@@ -26,12 +26,21 @@ Perform the following in the current example:
 * If the user is already logged in page should not allow him to see login or signin page.
 
 ### Solution
+Taking the previous exercise as a base, I took the navbar form inside header component and put it as an element directive to use it in the header component.
+At this point we went into the dashboard component and start upgrading this component, first of all making the dashboard state as abstract, then adding the 3 new components, Main / Config / Details.
+Then in the Config component route I use $http provider to get a json file inside assets/data in order to loads it in the resolve and passes it to the controller thanks to the binding.
 
-If you want to see the solution, click [here][3].
+In commons folder I add a directory named directives where navbar directive is and another called factories where I moved the Auth factory.
+
+The lastest thing was adding a new abstract state called auth to hold login and sign-up components.
+
+Between auth and dashboard there's a validation to redirect the user to the other one depending on if he's logged into the system.
+
+If you want to see my solution, click [here][3].
 
 ### Next
 * 003 - Communicating with servers.
 
 [1]:https://github.com/angular-ui/ui-router/wiki/Multiple-Named-Views
 [2]:https://github.com/angular-ui/ui-router/wiki/Nested-States-and-Nested-Views
-[3]:https://github.com/talosdigital/u-angularjs/tree/solved/002-routing-params-views/002-routing-params-views
+[3]:https://github.com/jeanpi-gomez/u-angularjs/tree/solved/002-routing-params-views/002-routing-params-views

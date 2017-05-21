@@ -4,8 +4,6 @@
   angular
     .module('angularApp')
     .component('dashboard', {
-      templateUrl: 'app/components/dashboard/dashboard.html',
-      controller: 'DashboardController',
-      controllerAs: 'dashboardCtrl'
+      template: '<section class="dashboard" ui-view></section>'
     });
 })();

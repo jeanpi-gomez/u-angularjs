@@ -8,15 +8,13 @@
   /** @ngInject */
   function routeConfig ($stateProvider) {
     $stateProvider.state('app.dashboard', {
-      url: '',
+      url: 'dashboard',
+      abstract: true,
       component: 'dashboard',
-      data: {
-        viewClass: 'dashboard'
-      },
       resolve: {
-        security: function($q, $state, $localStorage) {
-          if (!$localStorage.username) {
-            $state.go('login');
+        security: function($q, $state, Auth) {
+          if (!Auth.currentUser()) {
+            $state.go('auth.login');
             return $q.reject('Not authorized');
           }
         }

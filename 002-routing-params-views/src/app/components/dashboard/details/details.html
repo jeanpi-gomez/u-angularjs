@@ -1,0 +1,12 @@
+<div class="d-flex align-items-center dashboard">
+  <div class="jumbotron">
+    <h1 class="display-3">Talos Digital</h1>
+    <div ng-repeat="user in detailsCtrl.users" ng-if="user.id == detailsCtrl.userId">
+      <p class="lead">{{user.name}}</p>
+    </div>
+    <p class="buttons text-center">
+      <a class="btn btn-lg btn-success" href="#" role="button" ng-click="detailsCtrl.goToMain()">Main</a>
+      <a class="btn btn-lg btn-warning" href="#" role="button" ng-click="detailsCtrl.goToConfig()">Config</a>
+    </p>
+  </div>
+</div>

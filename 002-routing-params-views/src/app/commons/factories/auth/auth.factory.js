@@ -11,14 +11,15 @@
     vm.users = localStorage.getItem('userList') ? (JSON.parse(localStorage.getItem('userList'))) : [];
     vm.factory = {
       registerUser: registerUser,
-      logIn: logIn,
-      currentUser: currentUser
+      login: login,
+      currentUser: currentUser,
+      logout: logout
     };
 
     function registerUser (newUser) {
       if (!searchUser(newUser.email)) {
-        users.push(vm.newUser);
-        localStorage.setItem('userList', JSON.stringify(users));
+        vm.users.push(newUser);
+        localStorage.setItem('userList', JSON.stringify(vm.users));
         return true;
       } else {
         return false;
@@ -45,7 +46,7 @@
       return valid;
     }
 
-    function logIn (user) {
+    function login (user) {
       if (validLogin(user)) {
         localStorage.setItem('currentUser', user.email);
         return true;
@@ -64,8 +65,8 @@
       return current;
     }
 
-    function logOut (user) {
-      //...
+    function logout () {
+      localStorage.setItem('currentUser', null);
     }
 
     return vm.factory;

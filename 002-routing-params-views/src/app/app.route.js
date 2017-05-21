@@ -15,7 +15,7 @@
         abstract: true,
         component: 'app'
       });
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/dashboard/main');
   }
 
 })();

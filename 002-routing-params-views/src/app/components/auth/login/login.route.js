@@ -7,7 +7,7 @@
 
   /** @ngInject */
   function routeConfig ($stateProvider) {
-    $stateProvider.state('login', {
+    $stateProvider.state('auth.login', {
       url: '/login',
       component: 'login',
       params: {
@@ -15,14 +15,6 @@
       },
       data: {
         viewClass: 'login'
-      },
-      resolve: {
-        security: function($q, $state, $localStorage) {
-          if ($localStorage.username) {
-            $state.go('app.dashboard');
-            return $q.reject('User already logged');
-          }
-        }
       }
     });
   }

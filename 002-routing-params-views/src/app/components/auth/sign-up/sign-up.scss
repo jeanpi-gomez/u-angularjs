@@ -1,4 +1,4 @@
-.login {
+.sign-up {
 	min-width: 400px;
 	padding: 40px 20px;
 	margin: auto;
@@ -31,5 +31,14 @@
 		input, button {
 			width: 100%;
 		}
+	}
+
+	.loginLink, .error {
+		width: 100%;
+		text-align: center;
+	}
+
+	.error > label {
+		padding-bottom: 10px;
 	}
 }
