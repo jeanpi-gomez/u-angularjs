@@ -8,9 +8,9 @@
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('home', {
+      .state('weather', {
         url: '/',
-        templateUrl: 'app/states/home/home.html',
+        templateUrl: 'app/components/weather/weather.html',
         controller: 'WeatherController',
         controllerAs: 'weatherCtrl'
       });
