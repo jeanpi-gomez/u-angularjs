@@ -1,8 +1,19 @@
-<md-dialog>
-    <md-dialog-content>
-        {{dialogCtrl.data}}
-    </md-dialog-content>
-    <md-dialog-actions>
-        <md-button ng-click="dialogCtrl.closeDialog()" class="md-primary">Close</md-button>
-    </md-dialog-actions>
+<md-dialog class="dialog">
+  <md-dialog-content class="content">
+    <div ng-if="dialogCtrl.data.success">
+      <h3 ng-if="dialogCtrl.data.weather">Weather</h3>
+      <span ng-if="dialogCtrl.data.weather.location">Location: {{dialogCtrl.data.weather.location}}</span>
+      <span ng-if="dialogCtrl.data.weather.main">Main condition: {{dialogCtrl.data.weather.main}}</span>
+      <span ng-if="dialogCtrl.data.weather.description">Description: {{dialogCtrl.data.weather.description}}</span>
+      <span ng-if="dialogCtrl.data.weather.temp">Temperature: {{dialogCtrl.data.weather.temp}}°C</span>
+      <h3 ng-if="dialogCtrl.data.uv">UV</h3>
+      <span ng-if="dialogCtrl.data.uv.uvIndex">UV Index: {{dialogCtrl.data.uv.uvIndex}}</span>
+    </div>
+    <div ng-if="!dialogCtrl.data.success">
+      <span>No data available</span>
+    </div>
+  </md-dialog-content>
+  <md-dialog-actions>
+    <md-button ng-click="dialogCtrl.closeDialog()" class="md-raised md-primary md-button md-ink-ripple">Close</md-button>
+  </md-dialog-actions>
 </md-dialog>
