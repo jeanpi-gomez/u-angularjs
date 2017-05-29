@@ -1,0 +1,28 @@
+<div class="sign-up">
+  <div class="flex-container">
+    <div class="flex-item">
+      <img src="../../../assets/images/talos-logo.jpg" alt="talosdigital-logo" class="logo">
+    </div>
+        <form name="form" ng-submit="!signUpCtrl.form.$invalid && signUpCtrl.signUp()">
+          <div class="flex-item">
+            <input type="text" placeholder="Name" ng-model="signUpCtrl.newUser.name" required>
+          </div>
+          <div class="flex-item">
+            <input type="email" placeholder="Email" ng-model="signUpCtrl.newUser.email" required>
+          </div>
+          <div class="flex-item">
+            <input type="password" placeholder="Password" ng-model="signUpCtrl.newUser.password"
+                   autocomplete="new-password" required>
+          </div>
+          <div class="error">
+            <label ng-if="signUpCtrl.alert">{{ signUpCtrl.alert }}</label>
+          </div>
+          <div class="flex-item">
+            <button class="btn-lg btn-primary" type="submit">Sign Up</button>
+          </div>
+          <div class="loginLink">
+            <a ui-sref="auth.login" class="btn-lg">Log into your account here</a>
+          </div>
+        </form>
+  </div>
+</div>
