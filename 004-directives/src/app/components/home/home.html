@@ -12,16 +12,30 @@
             </md-button>
           </div>
         </div>
-
         <div md-color-picker ng-model="homeCtrl.card.background" label="Background"></div>
-
-        <div md-color-picker ng-model="homeCtrl.card.textColor" label="Text Color"></div>
+        <div md-color-picker ng-model="homeCtrl.card.colorText" label="Text Color"></div>
+        <div>
+          <md-input-container class="md-block flex-gt-sm" flex-gt-sm="">
+            <label for="title">Title</label>
+            <input ng-model="homeCtrl.card.title" class="md-input" id="title">
+          </md-input-container>
+        </div>
+        <div>
+          <md-input-container class="md-block flex-gt-sm" flex-gt-sm="">
+            <label for="description">Description</label>
+            <input ng-model="homeCtrl.card.description" class="md-input" id="description">
+          </md-input-container>
+        </div>
       </md-content>
     </form>
 
     <div flex="50">
       <md-subheader class="md-no-sticky">Card Directive</md-subheader>
+      <card class="md-no-sticky" card="homeCtrl.card" save-favourite="homeCtrl.saveFavourite(title)" reserved-by="homeCtrl.RESERVED_BY"></card>
       <md-subheader class="md-no-sticky">Favorite list</md-subheader>
+      <div class="favourites" ng-repeat="favourite in homeCtrl.favourites track by $index">
+        <span>{{favourite}}</span>
+      </div>
     </div>
   </div>
 

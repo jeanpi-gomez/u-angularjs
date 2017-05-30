@@ -28,7 +28,17 @@ We want to create a bussines presentation card, so we want to see the preview of
 
 ### Solution
 
-You might noticed that the example it's not completed, that's part of the challenge figure out, don't forget the good practices!, if you already completed it, take a look of the solution, click [here][3].
+As something consistent in my solutions is the file structure what I changed the first, so here I create a new directory
+called `commons` where I placed another folder named `directives`, then I moved there the card directive.
+After that I put the home folder inside `components`, also I had to change was the app.route and the card directive itself.
+
+After setting the project I started working on the directive, I made it a directive restricted to an element, this element
+receives some attributes attached to an isolated scope and then bind to the controller of the directive, the attributes are
+card, reservedBy and finally a callback to save favourites function on parent's controller.
+
+Last part was adding the function to save favourites in home's controller and to conclude I added to the home's page the
+card directive and an iterator to print the list of favourites, tracked by index so it can allow multiple favourites with
+the same name.
 
 [1]: https://material.angularjs.org/latest/
 [2]: https://blog.thoughtram.io/angularjs/2015/01/02/exploring-angular-1.3-bindToController.html
