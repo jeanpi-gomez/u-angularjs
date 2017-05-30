@@ -1,0 +1,20 @@
+<md-card ng-style="{'background-color': cardCtrl.card.background, 'color' : cardCtrl.card.colorText}">
+
+  <md-card-title>
+    <md-card-title-text>
+      <span class="md-headline">
+        <md-icon class="icon" ng-style="{'color' : cardCtrl.card.colorText}" md-font-set="md" ng-show="cardCtrl.card.icon">{{cardCtrl.card.icon}}</md-icon>
+        {{cardCtrl.card.title}}
+      </span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-content>
+    <p>{{cardCtrl.card.description}}</p>
+  </md-card-content>
+  <md-card-actions layout="row" layout-align="end center">
+    <span>{{cardCtrl.reservedBy}}</span>
+    <md-button class="md-icon-button" aria-label="Favorite" ng-click="cardCtrl.card.title && cardCtrl.saveFavourite({title: cardCtrl.card.title})">
+      <md-icon md-font-set="md" ng-style="{'color' : cardCtrl.card.colorText}">favorite</md-icon>
+    </md-button>
+  </md-card-actions>
+</md-card>
