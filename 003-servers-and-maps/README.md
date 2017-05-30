@@ -16,7 +16,11 @@ Perform the following in the current example:
 
 ### Solution
 
-You might noticed that the example it's not completed, that's part of the challenge figure out, don't forget the good practices!, if you already completed it, take a look of the solution, click [here][3].
+First of all, I changed the code to made it work, specifically the route file which was pointing to the wrong templateUrl
+and controller. Then I removed the server calls from controller and created a service called WeatherService which makes the
+calls to the API with the key from app.constants.
+Also in the controller I captured the click event to get the lat and lng and send them through the service and shows the
+response in a mdDialog from AngularMaterial.
 
 [1]:https://openweathermap.org/api
 [2]: http://angular-ui.github.io/ui-leaflet/#!/
