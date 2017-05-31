@@ -1,0 +1,44 @@
+.login {
+	min-width: 400px;
+	padding: 40px 20px;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.logo {
+		max-height: 250px;
+		width: 100%;
+	}
+
+	.flex-container {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		width: 400px;
+	}
+
+	.flex-item {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		min-height: 50px;
+		margin: auto;
+		margin-bottom: 2em;
+
+		input, button {
+			width: 100%;
+		}
+	}
+
+	.registerLink, .error {
+		width: 100%;
+		text-align: center;
+	}
+
+	.error > label {
+		padding-bottom: 10px;
+	}
+}
