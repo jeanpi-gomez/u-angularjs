@@ -7,7 +7,7 @@
     .controller('DialogController', DialogController);
 
     /** @ngInject */
-    function DialogController($scope, $mdDialog, data) {
+    function DialogController(data) {
         var vm = this;
         vm.success = false;
 
