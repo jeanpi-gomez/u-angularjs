@@ -7,9 +7,8 @@
 
   /** @ngInject */
   function WeatherFactory ($resource, $filter, $rootScope, WEATHER_API) {
-    var vm = this;
 
-    vm.weather = {
+   return {
     	getWeather: getWeather,
       getUV: getUV
     };
@@ -20,7 +19,7 @@
           method: 'GET'
         }
       });
-    };
+    }
 
     function getUV() {
       return $resource('http://api.openweathermap.org/v3/uvi/:latlng/current.json?appid='+WEATHER_API, {}, {
@@ -28,9 +27,7 @@
           method: 'GET'
         }
       });
-    };
-
-    return vm.weather;
+    }
 
   }
 
