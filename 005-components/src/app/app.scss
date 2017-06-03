@@ -11,15 +11,18 @@ html {
 }
 
 .site {
-  min-height: 100vh;
-  padding-top: 6rem;
+  min-height: 100%;
 }
 
-.site-content {
+.site-content{
   flex: 1;
 }
 
-.general-section {
+.general-section{
+  flex: 1;
+}
+
+.dashboard {
   flex: 1;
 }
 

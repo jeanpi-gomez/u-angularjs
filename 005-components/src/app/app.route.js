@@ -6,20 +6,16 @@
         .config(routerConfig);
 
     /** @ngInject */
-    function routerConfig($stateProvider, $urlRouterProvider) {
-        $stateProvider
-            .state('home', {
-                url: '/',
-                views:{
-                    'site@':{
-                        templateUrl: 'app/states/home/home.html',
-                        controller: 'HomeController',
-                        controllerAs: 'homeCtrl'
-                    }
-                }
-            });
+    function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
+      $locationProvider.html5Mode(true).hashPrefix('!');
 
-        $urlRouterProvider.otherwise('/');
+      $stateProvider
+        .state('app', {
+          url: '/',
+          abstract: true,
+          component: 'app'
+        });
+      $urlRouterProvider.otherwise('/dashboard/main');
     }
 
 })();

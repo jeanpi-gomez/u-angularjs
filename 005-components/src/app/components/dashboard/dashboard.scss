@@ -1,0 +1,12 @@
+.dashboard {
+  margin-top: 40px;
+
+	.jumbotron{
+		text-align: center;
+		flex: 1;
+	}
+}
+
+ui-view {
+  flex: 1;
+}

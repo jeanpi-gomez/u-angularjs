@@ -1,0 +1,10 @@
+<div class="user-card" ng-click="$ctrl.onUserSelected({user: $ctrl.user})" ng-blur="$ctrl.onUserLeft({user: $ctrl.user})">
+  <div class="thumbnail">
+    <div class="caption">
+      <h3>First Name: {{$ctrl.user.firstName}}</h3>
+      <h4>Last Name: {{$ctrl.user.lastName}}</h4>
+      <p>Age: {{$ctrl.user.age}}</p>
+      <p>Phone: {{$ctrl.user.phone}}</p>
+    </div>
+  </div>
+</div>
