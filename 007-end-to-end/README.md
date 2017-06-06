@@ -13,14 +13,9 @@ Perform the following in the current example:
 
 ### Solution
 
-You might noticed that the example it's not completed, that's part of the challenge figure out, don't forget the good practices!, if you already completed it, take a look of the solution, click [here][3].
+For this solution the first thing was renaming the files because we are testing home view and not main view.
 
-[1]:https://openweathermap.org/api
-[2]: http://angular-ui.github.io/ui-leaflet/#!/
-[3]: https://material.angularjs.org/latest/
-[4]: http://angular-ui.github.io/ui-leaflet/#!/examples/events
-[5]: https://openweathermap.org/current
-[6]: http://angular-ui.github.io/ui-leaflet/#!/examples/marker
-[7]: https://material.angularjs.org/latest/api/service/$mdDialog
-[8]: https://openweathermap.org/api/uvi
-[9]: https://openweathermap.org/api/pollution/co
+Then I tried to get all elements present in the page by model, css avoiding xpath due to the lack of stability when using xpath locator. After having the elements from the page I created some functions to add a favourite or set some text into a specific field, this is because it allows a better separation between the page object and the spec file.
+
+Finally in the spec file I added a function to convert rgba colors into hex color in order to compare the color values. All I do in the spec file is calling functions in the page object that has almost the whole logic to send values to the page or press some buttons.
+Also I got access to the elements in the directive so I can know what is the value of each field to compare it with the initial data sent with function fillForm.
